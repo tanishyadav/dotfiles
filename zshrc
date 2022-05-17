@@ -8,12 +8,6 @@ fi
 ## END POWERLEVEL10K
 
 
-## START SUPPORT_SCRIPTS
-. ~/.environ
-. ~/.aliases
-## END SUPPORT_SCRIPTS
-
-
 ## START OPTIONS
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
@@ -24,6 +18,21 @@ setopt notify              # report the status of background jobs immediately
 setopt numericglobsort     # sort filenames numerically when it makes sense
 setopt promptsubst         # enable command substitution in prompt
 ## END OPTIONS
+
+
+## START ENVIRONMENT
+export LANG=en_IN.UTF-8
+## END ENVIRONMENT
+
+
+## START ALIASES
+# color
+alias ls="ls --color=auto"
+# ls
+alias l="ls"
+alias ll="ls -l"
+alias la="ls -lA"
+## END ALIASES
 
 
 ## START POWERLEVEL10K
