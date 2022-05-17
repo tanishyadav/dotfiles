@@ -22,10 +22,14 @@ setopt promptsubst         # enable command substitution in prompt
 
 ## START ENVIRONMENT
 export LANG=en_IN.UTF-8
+export VISUAL=vim
+export EDITOR=$VISUAL
 ## END ENVIRONMENT
 
 
 ## START ALIASES
+# simple
+cls="clear"
 # color
 alias ls="ls --color=auto"
 # ls
