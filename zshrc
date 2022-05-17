@@ -32,6 +32,8 @@ alias ls="ls --color=auto"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -lA"
+# productivity
+alias clswap="sudo swapoff -a; sudo swapon -a"
 ## END ALIASES
 
 
