@@ -1,0 +1,7 @@
+# color
+alias ls="ls --color=auto"
+
+# ls
+alias l="ls"
+alias ll="ls -l"
+alias la="ls -lA"
