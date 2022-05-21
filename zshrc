@@ -1,11 +1,11 @@
-## START POWERLEVEL10K
+## START POWERLEVEL10K_INSTANT_PROMPT
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-## END POWERLEVEL10K
+## END POWERLEVEL10K_INSTANT_PROMPT
 
 
 ## START OPTIONS
@@ -28,8 +28,6 @@ export EDITOR=$VISUAL
 
 
 ## START ALIASES
-# simple
-cls="clear"
 # color
 alias ls="ls --color=auto"
 # ls
@@ -37,8 +35,20 @@ alias l="ls"
 alias ll="ls -l"
 alias la="ls -lA"
 # productivity
+alias cls="clear"
 alias clswap="sudo swapoff -a; sudo swapon -a"
+alias rezsh="exec zsh"
 ## END ALIASES
+
+
+## START PLUGINS
+source ~/software/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## END PLUGINS
+
+
+## START SHELL_COMPLETION
+autoload -Uz compinit && compinit
+## END SHELL_COMPLETION
 
 
 ## START POWERLEVEL10K
