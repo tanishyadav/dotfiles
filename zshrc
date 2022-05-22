@@ -33,6 +33,7 @@ autoload -Uz compinit && compinit
 export LANG=en_IN.UTF-8
 export VISUAL=vim
 export EDITOR=$VISUAL
+export PATH=$HOME/.local/bin:$PATH
 ## END ENVIRONMENT
 
 
