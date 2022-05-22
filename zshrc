@@ -54,4 +54,5 @@ alias rezsh="exec zsh"
 ## START PLUGINS
 # Keep zsh-syntax-highlighting very close to bottom
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ## END PLUGINS
