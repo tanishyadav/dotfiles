@@ -67,6 +67,10 @@ alias rezsh="exec zsh"
 alias g="git"
 
 
+# ### AUTOSUGGESTIONS
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
 # ### SYNTAX_HIGHILIGHTING
 # Keep zsh-syntax-highlighting very close to bottom
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
