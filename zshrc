@@ -60,10 +60,11 @@ alias ls="ls --color=auto"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -lA"
-# productivity
+# others
 alias cls="clear"
 alias clswap="sudo swapoff -a; sudo swapon -a"
 alias rezsh="exec zsh"
+alias g="git"
 
 
 # ### SYNTAX_HIGHILIGHTING
