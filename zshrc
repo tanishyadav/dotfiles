@@ -189,6 +189,12 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 
 
+# ### HISTORY-SUBSTRING-SEARCH
+# Keep this after SYNTAX-HIGHLIGHTING
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+
+
 # ### MISCELLANEOUS
 
 # make less more friendly for non-text input files, see lesspipe(1)
