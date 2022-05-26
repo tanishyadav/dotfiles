@@ -26,6 +26,10 @@ setopt promptsubst         # enable command substitution in prompt
 autoload -Uz compinit && compinit
 
 
+# ### KEY_BINDINGS
+bindkey -v
+
+
 # ### ENVIRONMENT
 export LANG=en_IN.UTF-8
 export VISUAL=vim
@@ -33,17 +37,17 @@ export EDITOR=$VISUAL
 # PATH
 path_prepend() {
     if [ -d "$1" ]; then
-        PATH=${PATH//":$1:"/:} #delete all instances in the middle
-        PATH=${PATH/%":$1"/} #delete any instance at the end
-        PATH=${PATH/#"$1:"/} #delete any instance at the beginning
+        PATH=${PATH//":$1:"/:}     #delete all instances in the middle
+        PATH=${PATH/%":$1"/}       #delete any instance at the end
+        PATH=${PATH/#"$1:"/}       #delete any instance at the beginning
         PATH="$1${PATH:+":$PATH"}" #prepend $1 or if $PATH is empty set to $1
     fi
 }
 path_append() {
     if [ -d "$1" ]; then
-        PATH=${PATH//":$1:"/:} #delete all instances in the middle
-        PATH=${PATH/%":$1"/} #delete any instance at the end
-        PATH=${PATH/#"$1:"/} #delete any instance at the beginning
+        PATH=${PATH//":$1:"/:}     #delete all instances in the middle
+        PATH=${PATH/%":$1"/}       #delete any instance at the end
+        PATH=${PATH/#"$1:"/}       #delete any instance at the beginning
         PATH="${PATH:+"$PATH:"}$1" #append $1 or if $PATH is empty set to $1
     fi
 }
@@ -70,7 +74,6 @@ alias g="git"
 # ### AUTOSUGGESTIONS
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=11'
-# TODO: Binding for select whole and to select word
 
 
 # ### SYNTAX_HIGHILIGHTING
