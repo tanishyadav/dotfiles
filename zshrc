@@ -199,6 +199,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # ### HISTORY-SUBSTRING-SEARCH
 # Keep this after SYNTAX-HIGHLIGHTING
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+unset HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND
+unset HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND
+HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M emacs '^P' history-substring-search-up
