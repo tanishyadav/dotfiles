@@ -24,14 +24,49 @@ setopt promptsubst         # enable command substitution in prompt
 
 
 
+# ### KEY_BINDINGS
+bindkey -e                                        # emacs key bindings
+bindkey ' ' magic-space                           # do history expansion on space
+bindkey '^[[3;5~' kill-word                       # ctrl + Supr
+bindkey '^[[3~' delete-char                       # delete
+bindkey '^[[1;5C' forward-word                    # ctrl + ->
+bindkey '^[[1;5D' backward-word                   # ctrl + <-
+bindkey '^[[5~' beginning-of-buffer-or-history    # page up
+bindkey '^[[6~' end-of-buffer-or-history          # page down
+bindkey '^[[H' beginning-of-line                  # home
+bindkey '^[[F' end-of-line                        # end
+bindkey '^[[Z' undo                               # shift + tab undo last action
+
+
+
 # ### SHELL_COMPLETION
 autoload -Uz compinit
 compinit
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 
 
-# ### KEY_BINDINGS
-bindkey -e
+# ### HISTORY
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=2000
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+#setopt share_history         # share command history data
 
 
 
@@ -39,7 +74,6 @@ bindkey -e
 export LANG=en_IN.UTF-8
 export VISUAL=vim
 export EDITOR=$VISUAL
-
 # ## paths
 # automatically remove duplicates from these arrays
 typeset -U path cdpath fpath manpath
@@ -57,6 +91,13 @@ cdpath+=("$HOME")
 # takedir - oh-my-zsh
 function take() {
   mkdir -p $@ && cd ${@:$#}
+}
+function prettymount() {
+	if [[ $# = 0 ]]; then
+		mount | column -t
+	else
+		mount $@
+	fi
 }
 
 
@@ -105,7 +146,7 @@ alias lsd='ls -ld *(-/DN)' # list only directories and symbolic links that point
 alias lsa='ls -ld .*'      # list only file beginning with "."
 
 # ## cd
-# TODO: If start using z, then modify accordingly
+# TODO: When start using z, then modify accordingly
 alias ..='cd ..'
 alias .2='cd ../..'
 alias .3='cd ../../..'
@@ -122,7 +163,7 @@ alias pu='pushd'
 alias po='popd'
 alias ty='type -fa'
 alias sudo='sudo '                            # allow alias expansion on sudo commands
-alias mount='mount |column -t'
+alias mount='prettymount'
 alias rezsh='exec zsh'
 alias clswap='sudo swapoff -a;sudo swapon -a' # clear swap
 
@@ -138,3 +179,15 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=11'
 # Keep zsh-syntax-highlighting very close to bottom
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+
+
+# ### MISCELLANEOUS
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# enable command-not-found if installed
+if [ -f /etc/zsh_command_not_found ]; then
+    . /etc/zsh_command_not_found
+fi
