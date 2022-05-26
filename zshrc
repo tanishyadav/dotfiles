@@ -69,6 +69,8 @@ alias g="git"
 
 # ### AUTOSUGGESTIONS
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=11'
+# TODO: Binding for select whole and to select word
 
 
 # ### SYNTAX_HIGHILIGHTING
