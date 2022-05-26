@@ -81,9 +81,8 @@ path=("$HOME/.local/bin" $path)
 path+=("/usr/local/sbin")
 path+=("/usr/sbin")
 path+=("/sbin")
-manpath=("$HOME/.local/share/man" $manpath)
-export MANPATH
 cdpath+=("$HOME")
+PATH="$HOME/.pyenv/bin:$PATH"
 
 
 
@@ -220,3 +219,6 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 # credentials
 source ~/.credentials
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
