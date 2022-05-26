@@ -192,6 +192,12 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # ### HISTORY-SUBSTRING-SEARCH
 # Keep this after SYNTAX-HIGHLIGHTING
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 
 
