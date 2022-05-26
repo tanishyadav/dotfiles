@@ -168,6 +168,7 @@ alias h='history'
 alias pu='pushd'
 alias po='popd'
 alias ty='type -fa'
+alias git='echo "Use g and save some keystrokes" #'
 alias sudo='sudo '                            # allow alias expansion on sudo commands
 alias mount='prettymount'
 alias rezsh='exec zsh'
