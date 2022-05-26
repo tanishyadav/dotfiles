@@ -154,6 +154,12 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias .6='cd ../../../../../..'
 
+# ## preserve-root
+#alias rm='rm --preserve-root'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
 # ## others
 alias g='git'
 alias j='jobs'
