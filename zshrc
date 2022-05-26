@@ -27,7 +27,7 @@ autoload -Uz compinit && compinit
 
 
 # ### KEY_BINDINGS
-bindkey -v
+bindkey -e
 
 
 # ### ENVIRONMENT
