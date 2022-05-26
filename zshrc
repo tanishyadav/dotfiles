@@ -99,6 +99,13 @@ function prettymount() {
 		mount $@
 	fi
 }
+function ipshow() {
+	if [[ $# = 0 ]]; then
+		curl -s ipinfo.io/$(myip)?token=$IPINFO_TOKEN
+	else
+		curl -s ipinfo.io/$1?token=$IPINFO_TOKEN
+	fi
+}
 
 
 
@@ -169,6 +176,7 @@ alias pu='pushd'
 alias po='popd'
 alias ty='type -fa'
 alias git='echo "Use g and save some keystrokes" #'
+alias myip='echo $(curl -s ipinfo.io/ip)'
 alias sudo='sudo '                            # allow alias expansion on sudo commands
 alias mount='prettymount'
 alias rezsh='exec zsh'
@@ -210,3 +218,5 @@ bindkey -M vicmd 'j' history-substring-search-down
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
+# credentials
+source ~/.credentials
