@@ -161,7 +161,7 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # ## others
-alias g='git'
+alias g='command git'
 alias j='jobs'
 alias c='clear'
 alias h='history'
