@@ -163,6 +163,10 @@ nnoremap <LEADER>w :w<CR>
 nnoremap <LEADER>t :vert term<CR>
 " Easier FZF
 nnoremap <LEADER>f :FZF<CR>
+" Git status - vertical
+nnoremap <LEADER>g :vert Git<CR>
+" Tab through windows
+nnoremap <TAB> <C-W><C-W>
 " TODO: Move bindings to filetype files
 " TODO: Add binding for auto-completion
 
