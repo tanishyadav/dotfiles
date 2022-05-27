@@ -66,6 +66,9 @@ setopt hist_expire_dups_first # delete duplicates first when HISTFILE size excee
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
+setopt hist_ignore_all_dups   # https://unix.stackexchange.com/questions/599641/why-do-i-have-duplicates-in-my-zsh-history
+setopt hist_find_no_dups      # https://unix.stackexchange.com/questions/599641/why-do-i-have-duplicates-in-my-zsh-history
+setopt hist_save_no_dups      # https://unix.stackexchange.com/questions/599641/why-do-i-have-duplicates-in-my-zsh-history
 #setopt share_history         # share command history data
 
 
@@ -167,14 +170,12 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # ## others
-alias g='command git'
 alias j='jobs'
 alias c='clear'
 alias h='history'
 alias pu='pushd'
 alias po='popd'
 alias ty='type -fa'
-alias git='echo "Use g and save some keystrokes" #'
 alias myip='echo $(curl -s ipinfo.io/ip)'
 alias sudo='sudo '                            # allow alias expansion on sudo commands
 alias mount='prettymount'
@@ -225,3 +226,7 @@ source ~/.credentials
 # pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+# sudo.zsh
+source ~/.zsh/zsh-sudo/sudo.zsh
+# git.zsh
+source ~/.zsh/zsh-git/git.zsh
