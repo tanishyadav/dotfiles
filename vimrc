@@ -1,10 +1,10 @@
 "
-"   ______            _      ____  __          __           
+"   ______            _      ____  __          __
 "  /_  __/___ _____  (_)____/ /\ \/ /___ _____/ /___ __   __
 "   / / / __ `/ __ \/ / ___/ __ \  / __ `/ __  / __ `/ | / /
-"  / / / /_/ / / / / (__  ) / / / / /_/ / /_/ / /_/ /| |/ / 
-" /_/  \__,_/_/ /_/_/____/_/ /_/_/\__,_/\__,_/\__,_/ |___/  
-"                                                           
+"  / / / /_/ / / / / (__  ) / / / / /_/ / /_/ / /_/ /| |/ /
+" /_/  \__,_/_/ /_/_/____/_/ /_/_/\__,_/\__,_/\__,_/ |___/
+"
 "
 
 
@@ -157,8 +157,8 @@ nnoremap <LEADER>O O<ESC>
 " Copy to clipboard
 "nnoremap <LEADER>y "+y
 "nnoremap <LEADER>Y "+Y
-" Exit a *byte* faster
-"nnoremap <LEADER>q :q<CR>
+" Write a *byte* faster
+nnoremap <LEADER>w :w<CR>
 " I open terminals a bit too often :D
 nnoremap <LEADER>t :vert term<CR>
 " Easier FZF
@@ -196,9 +196,20 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'tpope/vim-commentary'
 Plug 'lifepillar/vim-solarized8'
 autocmd vimenter * ++nested colorscheme solarized8
+Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='solarized'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-commentary'
+Plug 'ntpeters/vim-better-whitespace'
+let g:show_spaces_that_precede_tabs=1
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 call plug#end()
-
 
