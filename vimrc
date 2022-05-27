@@ -127,8 +127,6 @@ set infercase
 
 " Map jj to ESC
 inoremap jj <ESC>
-" " Prevent the use of ESC to get used to
-" inoremap <ESC> kj
 " Enable use of undo on CTRL+U and CTRL+W in insert mode
 inoremap <C-U> <C-G>u<C-U>
 inoremap <C-W> <C-G>u<C-W>
@@ -147,8 +145,9 @@ nnoremap <LEADER>; m'A;<ESC>`'
 " nnoremap <LEADER>s :set list!<CR>
 " Remove highlights for current search
 nnoremap <LEADER>h :noh<CR>
-" Just like o but doesn't enter INSERT mode
+" Just like o/O but doesn't enter INSERT mode
 nnoremap <LEADER>o o<ESC>
+nnoremap <LEADER>O O<ESC>
 " " Paste from clipboard
 " nnoremap <LEADER>p "+p
 " nnoremap <LEADER>P "+P
