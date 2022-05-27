@@ -91,7 +91,7 @@ PATH="$HOME/.pyenv/bin:$PATH"
 
 # ### FUNCTIONS
 # takedir - oh-my-zsh
-function take() {
+function mkcd take() {
   mkdir -p $@ && cd ${@:$#}
 }
 function prettymount() {
@@ -107,6 +107,12 @@ function ipshow() {
 	else
 		curl -s ipinfo.io/$1?token=$IPINFO_TOKEN
 	fi
+}
+function kcc() {
+	gcc -o "$1.out" "$1.c" && ./$1.out
+}
+function kcr() {
+	./$1.out
 }
 
 
