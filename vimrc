@@ -39,10 +39,10 @@ set nobackup
 syntax on
 " Enable filetype plugins and indents
 filetype plugin indent on
-" " Set colour scheme
-" colorscheme ron
 " Set the leader key
 let mapleader=" "
+" My terminal supports true colors
+set termguicolors
 
 
 
@@ -191,8 +191,12 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Vim-plug plugins
 call plug#begin()
 Plug 'tpope/vim-commentary'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
+
+" Colorscheme
+"set background=dark
+colorscheme solarized8
 
