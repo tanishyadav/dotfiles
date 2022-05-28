@@ -130,8 +130,9 @@ set infercase
 " | Mappings |
 " ------------
 
-" Map jj to ESC
-inoremap jj <ESC>
+" ESC
+inoremap kj <ESC>
+inoremap jk <ESC>
 " Enable use of undo on CTRL+U and CTRL+W in insert mode
 inoremap <C-U> <C-G>u<C-U>
 inoremap <C-W> <C-G>u<C-W>
