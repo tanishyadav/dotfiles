@@ -118,7 +118,7 @@ function kcr() {
 	./$1.out
 }
 function kg() {
-	gaaa "Add $(basename $(dirname $(readlink -f $1))): $(basename $(readlink -f $1))"
+	gaaa "Add $(basename $(dirname $(readlink -f "$1.c"))): $(basename $(readlink -f "$1.c"))"
 }
 
 
