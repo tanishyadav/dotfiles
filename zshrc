@@ -108,11 +108,17 @@ function ipshow() {
 		curl -s ipinfo.io/$1?token=$IPINFO_TOKEN
 	fi
 }
+function gaaa() {
+	git add --all && git commit -m $@ && git push
+}
 function kcc() {
 	gcc -o "$1.out" "$1.c" && ./$1.out
 }
 function kcr() {
 	./$1.out
+}
+function kg() {
+	gaaa "Add $(basename $(dirname $(readlink -f $1))): $(basename $(readlink -f $1))"
 }
 
 
