@@ -90,6 +90,10 @@ PATH="$HOME/.pyenv/bin:$PATH"
 
 
 # ### FUNCTIONS
+
+# ## autoloads
+autoload -U zmv
+
 # takedir - oh-my-zsh
 function mkcd take() {
   mkdir -p $@ && cd ${@:$#}
