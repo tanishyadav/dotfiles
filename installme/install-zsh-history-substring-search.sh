@@ -10,4 +10,7 @@ if [[ -d "$ZHSS_SRC_PATH" ]]; then
 	rm -rf "$ZHSS_SRC_PATH"
 fi
 
+echo "Creating zsh-history-substring-search directory"
+mkdir -p "$ZHSS_SRC_PATH"
+
 git clone $ZHSS_SRC_LINK $ZHSS_SRC_PATH
