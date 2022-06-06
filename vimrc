@@ -132,7 +132,8 @@ set infercase
 
 " ESC
 inoremap kj <ESC>
-inoremap jk <ESC>
+vnoremap kj <ESC>
+cnoremap kj <C-C>
 " Enable use of undo on CTRL+U and CTRL+W in insert mode
 inoremap <C-U> <C-G>u<C-U>
 inoremap <C-W> <C-G>u<C-W>
