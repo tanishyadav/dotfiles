@@ -74,9 +74,11 @@ setopt hist_save_no_dups      # https://unix.stackexchange.com/questions/599641/
 
 
 # ### ENVIRONMENT
-export LANG=en_IN.UTF-8
-export VISUAL=vim
-export EDITOR=$VISUAL
+export LANG="en_IN.UTF-8"
+export LC_ALL="$LANG"
+export VISUAL="vim"
+export EDITOR="$VISUAL"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # ## paths
 # automatically remove duplicates from these arrays
 typeset -U path cdpath fpath manpath
@@ -169,6 +171,12 @@ alias la='ls -lAv'
 alias lsd='ls -ldv *(-/DN)' # list only directories and symbolic links that point to directories
 alias lsa='ls -lvdv .*'      # list only file beginning with "."
 
+# ## bat
+alias b='bat'
+alias ba='bat --show-all'
+alias bathelp='bat --plain --language=help'
+alias -g HP='--help 2>&1 |bathelp'
+
 # ## cd
 # TODO: When start using z, then modify accordingly
 alias ..='cd ..'
@@ -188,8 +196,6 @@ alias chgrp='chgrp --preserve-root'
 alias j='jobs'
 alias c='clear'
 alias h='history'
-alias b='bat'
-alias ba='bat --show-all'
 alias pu='pushd'
 alias po='popd'
 alias ty='type -fa'
