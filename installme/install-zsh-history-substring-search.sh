@@ -13,4 +13,4 @@ fi
 echo "Creating zsh-history-substring-search directory"
 mkdir -p "$ZHSS_SRC_PATH"
 
-git clone $ZHSS_SRC_LINK $ZHSS_SRC_PATH
+git clone --depth=1 "$ZHSS_SRC_LINK" "$ZHSS_SRC_PATH"

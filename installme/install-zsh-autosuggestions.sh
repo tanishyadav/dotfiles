@@ -13,4 +13,4 @@ fi
 echo "Creating zsh-autosuggestions directory..."
 mkdir -p "$ZAS_SRC_PATH"
 
-git clone $ZAS_SRC_LINK $ZAS_SRC_PATH
+git clone --depth=1 "$ZAS_SRC_LINK" "$ZAS_SRC_PATH"

@@ -46,5 +46,5 @@ fi
 
 if yesno "Do you want to change the default shell? (y/n) "; then
 	echo "Changing default shell...";
-	sudo chsh -s "$PREFIX_PATH/bin/zsh" $USER;
+	sudo chsh -s "$PREFIX_PATH/bin/zsh" "$USER";
 fi

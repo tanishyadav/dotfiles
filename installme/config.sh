@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-PREFIX_PATH=$HOME/.local
-SRC_PATH=$PREFIX_PATH/src
-ZSH_PATH=$HOME/.zsh
+PREFIX_PATH="$HOME/.local"
+SRC_PATH="$PREFIX_PATH/src"
+PYENV_PATH="$HOME/.pyenv"
+ZSH_PATH="$HOME/.zsh"
 
 function yesno() {
 	while true; do

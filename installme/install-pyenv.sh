@@ -1,10 +1,37 @@
 #!/usr/bin/env bash
 
-PYENV_PATH="$HOME/.pyenv"
+source "$(dirname $(readlink -f $0))/config.sh"
+
+echo "Installing required packages..."
+sudo apt install make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
 if [[ -d "$PYENV_PATH" ]]; then
 	echo "Removing already existing pyenv directory..."
 	rm -rf "$PYENV_PATH"
 fi
 
+echo "Running pyenv.run script..."
 curl https://pyenv.run | bash
+
+echo
+echo "----------------------------------------------------------------------"
+echo "                          PYENV INSTALLED!!!                          "
+echo "----------------------------------------------------------------------"
+echo
+
+if yesno "Install python '3.10.4'? (y/n) "; then
+	echo "Installing..."
+	$PYENV_PATH/bin/pyenv install "3.10.4"
+fi
+
+if yesno "Make '3.10.4' global? (y/n) "; then
+	echo "Globalling..."
+	$PYENV_PATH/bin/pyenv global "3.10.4"
+fi
+
+if yesno "Install python '2.7.18'? (y/n) "; then
+	echo "Installing..."
+	$PYENV_PATH/bin/pyenv install "2.7.18"
+fi
