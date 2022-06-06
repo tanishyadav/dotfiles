@@ -23,7 +23,7 @@ curl -Lo "$fpath" "$url/$fname"
 echo "Installing deb package..."
 sudo dpkg -i "$fpath"
 echo "Removing deb file"
-#rm "$fpath"
+rm "$fpath"
 
 echo "Linking..."
 mkdir -p ~/.local/bin
