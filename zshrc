@@ -78,6 +78,7 @@ export LANG="en_IN.UTF-8"
 export LC_ALL="$LANG"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
+export PAGER="less -RF"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # ## paths
 # automatically remove duplicates from these arrays
