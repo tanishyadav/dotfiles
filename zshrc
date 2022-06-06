@@ -85,7 +85,6 @@ path+=("/usr/local/sbin")
 path+=("/usr/sbin")
 path+=("/sbin")
 cdpath+=("$HOME")
-PATH="$HOME/.pyenv/bin:$PATH"
 
 
 
@@ -164,11 +163,11 @@ alias -g H='|head'
 alias -g T='|tail'
 
 # ## ls
-alias l='ls -F'
-alias ll='ls -l'
-alias la='ls -lA'
-alias lsd='ls -ld *(-/DN)' # list only directories and symbolic links that point to directories
-alias lsa='ls -ld .*'      # list only file beginning with "."
+alias l='ls -Fv'
+alias ll='ls -lv'
+alias la='ls -lAv'
+alias lsd='ls -ldv *(-/DN)' # list only directories and symbolic links that point to directories
+alias lsa='ls -lvdv .*'      # list only file beginning with "."
 
 # ## cd
 # TODO: When start using z, then modify accordingly
@@ -240,6 +239,8 @@ fi
 # credentials
 source ~/.credentials
 # pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # sudo.zsh
