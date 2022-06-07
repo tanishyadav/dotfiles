@@ -24,8 +24,3 @@ echo "Installing deb package..."
 sudo dpkg -i "$fpath"
 echo "Removing deb file"
 rm "$fpath"
-
-echo "Linking..."
-mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat 2> /dev/null
-echo "DONE!!!"
