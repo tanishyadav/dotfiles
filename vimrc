@@ -83,12 +83,12 @@ set ttimeoutlen=100
 set display=truncate
 " Minimum screen lines around the cursor
 set scrolloff=3
-" Showing tabs, new lines and trailing spaces
-"set listchars=eol:$,tab:>-,trail:-
+" Listchars
+set listchars=tab:\ \ →,nbsp:·,extends:→,precedes:←
+set list
 " Manage wrapping of lines
 set nowrap
 set sidescroll=5
-"set listchars+=precedes:<,extends:>
 " Make tilde an opertor
 "set tildeop
 " Show status line always
