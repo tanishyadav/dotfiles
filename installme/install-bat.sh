@@ -5,22 +5,22 @@ source "$(dirname $(readlink -f $0))/config.sh"
 echo "Removing already present bat..."
 sudo apt remove bat
 
-defver="0.21.0"
-read -p "Give the version of bat to install ($defver): " ver
-ver=${ver:-"$defver"}
+deb_url=$(curl -sSL https://api.github.com/repos/sharkdp/bat/releases/latest | grep "browser_download_url" | grep -v musl | grep amd64 | grep deb)
+deb_url=${deb_url#*: \"}
+deb_url=${deb_url%\"}
 
-url="https://github.com/sharkdp/bat/releases/download/v$ver"
-fname="bat_${ver}_amd64.deb"
-fpath="$SRC_PATH/$fname"
+deb_file=${deb_url##*/}
 
-if [[ -e "$fpath" ]]; then
+deb_path="$SRC_PATH/$deb_file"
+
+if [[ -e "$deb_path" ]]; then
 	echo "Removing already present deb file..."
-	rm "$fpath"
+	rm "$deb_path"
 fi
 
-echo "Installing deb file..."
-curl -Lo "$fpath" "$url/$fname"
+echo "Downloading deb file..."
+curl -Lo "$deb_path" "$deb_url"
 echo "Installing deb package..."
-sudo dpkg -i "$fpath"
+sudo dpkg -i "$deb_path"
 echo "Removing deb file"
-rm "$fpath"
+rm "$deb_path"
