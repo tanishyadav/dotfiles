@@ -124,7 +124,9 @@ function kcr() {
 	./$1.out
 }
 function kg() {
-	gaaa "Add $(basename $(dirname $(readlink -f "$1.c"))): $(basename $(readlink -f "$1.c"))"
+	git add "$(basename $(readlink -f "$1.c"))"
+	git commit -m "Add $(basename $(dirname $(readlink -f "$1.c"))): $(basename $(readlink -f "$1.c"))"
+	git push
 }
 
 
