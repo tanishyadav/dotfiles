@@ -48,6 +48,19 @@ set termguicolors
 "colorscheme solarized8
 " Enable mouse support
 set mouse=a
+" Make Alt and Meta key work in GNOME terminal
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+let c='a'
+while c <= 'z'
+  exec "set <M-".c.">=\e".c
+  exec "imap \e".c." <M-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
 
 
 
@@ -77,8 +90,10 @@ set undolevels=10000
 "set bs=indent,eol,start
 set bs=indent,start
 " Reduce waiting time
+set timeout
 set ttimeout
-set ttimeoutlen=100
+set timeoutlen=300
+set ttimeoutlen=50
 " Show @@@ in the last line if it is truncated, instead of hiding the whole line
 set display=truncate
 " Minimum screen lines around the cursor
@@ -220,5 +235,11 @@ Plug 'ntpeters/vim-better-whitespace'
 let g:show_spaces_that_precede_tabs=1
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'jiangmiao/auto-pairs'
+let g:AutoPairsFlyMode = 1
+" g:AutoPairsShortcutToggle = '<A-p>'
+" g:AutoPairsShortcutFastWrap = '<A-e>'
+" g:AutoPairsShortcutJump = '<A-n>'
+
 call plug#end()
 
