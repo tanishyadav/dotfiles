@@ -190,6 +190,7 @@ nnoremap <TAB> <C-W><C-W>
 " Load builtin plugins
 packadd matchit
 packadd justify
+packadd termdebug
 
 
 
