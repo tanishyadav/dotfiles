@@ -61,6 +61,10 @@ while c <= 'z'
   exec "imap \e".c." <M-".c.">"
   let c = nr2char(1+char2nr(c))
 endw
+" Cursors
+let &t_SI = "\<esc>[6 q"
+let &t_SR = "\<esc>[4 q"
+let &t_EI = "\<esc>[2 q"
 
 
 
