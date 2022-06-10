@@ -180,14 +180,18 @@ alias ba='bat --show-all'
 alias bathelp='bat --plain --language=help'
 alias -g HP='--help 2>&1 |bathelp'
 
+# ## fasd
+alias j='fasd_cd -d'
+alias v='f -e vim'
+
 # ## cd
-# TODO: When start using z, then modify accordingly
-alias ..='cd ..'
-alias .2='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-alias .6='cd ../../../../../..'
+alias ~='j ~'
+alias ..='j ..'
+alias ...='j ../..'
+alias ....='j ../../..'
+alias .....='j ../../../..'
+alias ......='j ../../../../..'
+alias .......='j ../../../../../..'
 
 # ## preserve-root
 #alias rm='rm --preserve-root'
@@ -196,9 +200,9 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # ## others
-alias j='jobs'
 alias c='clear'
 alias h='history'
+alias jb='jobs'
 alias pu='pushd'
 alias po='popd'
 alias ty='type -fa'
