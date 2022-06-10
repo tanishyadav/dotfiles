@@ -23,6 +23,7 @@ torun=( "crap-pack-rm"
 	"pyenv"
 	"color-spaces"
 	"bat"
+	"fasd"
 )
 for script in "${torun[@]}"; do
 	if yesno "Install $script ? (y/n) "; then
