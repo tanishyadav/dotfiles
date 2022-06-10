@@ -182,7 +182,7 @@ alias -g HP='--help 2>&1 |bathelp'
 
 # ## fasd
 alias j='fasd_cd -d'
-alias v='f -e vim'
+alias v='f -e vim -b viminfo'
 
 # ## cd
 alias ~='j ~'
