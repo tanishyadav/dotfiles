@@ -186,13 +186,13 @@ alias j='fasd_cd -d'
 alias v='f -e vim -b viminfo'
 
 # ## cd
-alias ~='j ~'
-alias ..='j ..'
-alias ...='j ../..'
-alias ....='j ../../..'
-alias .....='j ../../../..'
-alias ......='j ../../../../..'
-alias .......='j ../../../../../..'
+alias ~='cd ~'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .......='cd ../../../../../..'
 
 # ## preserve-root
 #alias rm='rm --preserve-root'
