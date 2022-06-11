@@ -156,6 +156,8 @@ cnoremap kj <C-C>
 " Enable use of undo on CTRL+U and CTRL+W in insert mode
 inoremap <C-U> <C-G>u<C-U>
 inoremap <C-W> <C-G>u<C-W>
+" Enable use of undo on enters
+inoremap <CR> <C-G>u<CR>
 " Put the closing quote, parenthesis and company
 "inoremap ( ()<ESC>i
 "inoremap [ []<ESC>i
