@@ -160,7 +160,7 @@ inoremap <C-W> <C-G>u<C-W>
 "inoremap ( ()<ESC>i
 "inoremap [ []<ESC>i
 "inoremap { {}<ESC>i
-inoremap {<CR> {<CR>}<C-G>u<C-o>O
+"inoremap {<CR> {<CR>}<C-G>u<C-o>O
 "inoremap ' ''<ESC>i
 "inoremap " ""<ESC>i
 "inoremap /* /**/<ESC>hi
