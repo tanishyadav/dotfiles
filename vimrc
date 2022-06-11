@@ -244,6 +244,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsFlyMode = 1
+Plug 'mileszs/ack.vim'
+let g:ackprg = 'ag --vimgrep'
 
 call plug#end()
 
