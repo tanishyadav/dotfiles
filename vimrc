@@ -91,8 +91,7 @@ set history=10000
 " Increase max undo levels
 set undolevels=10000
 " Use backspace in a normal way
-"set bs=indent,eol,start
-set bs=indent,start
+set bs=indent,eol,start
 " Reduce waiting time
 set timeout
 set ttimeout
