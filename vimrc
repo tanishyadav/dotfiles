@@ -48,13 +48,13 @@ set termguicolors
 "colorscheme solarized8
 " Enable mouse support
 set mouse=a
-" Make Alt and Meta key work in GNOME terminal
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
+" Make either meta or alt key work in GNOME terminal; Both can't :(
+"let c='a'
+"while c <= 'z'
+"  exec "set <A-".c.">=\e".c
+"  exec "imap \e".c." <A-".c.">"
+"  let c = nr2char(1+char2nr(c))
+"endw
 let c='a'
 while c <= 'z'
   exec "set <M-".c.">=\e".c
