@@ -95,7 +95,7 @@ set bs=indent,eol,start
 " Reduce waiting time
 set timeout
 set ttimeout
-set timeoutlen=300
+set timeoutlen=500
 set ttimeoutlen=50
 " Show @@@ in the last line if it is truncated, instead of hiding the whole line
 set display=truncate
