@@ -133,6 +133,8 @@ set textwidth=80
 "set smarttab
 " Automatically indent next lines based on previous lines
 set autoindent
+" Copy indentation from previous line
+set copyindent
 " Show cursor at the start of tab
 "set listchars=tab:\ \  list
 " Use UTF-8 for almost everything
