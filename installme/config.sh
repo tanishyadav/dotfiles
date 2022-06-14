@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+TMP_PATH="/tmp"
 PREFIX_PATH="$HOME/.local"
 SRC_PATH="$PREFIX_PATH/src"
+BIN_PATH="$PREFIX_PATH/bin"
 PYENV_PATH="$HOME/.pyenv"
 ZSH_PATH="$HOME/.zsh"
 
