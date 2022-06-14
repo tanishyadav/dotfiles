@@ -247,7 +247,9 @@ Plug 'jiangmiao/auto-pairs'
 let g:AutoPairsFlyMode = 1
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
-Plug 'dpc/vim-smarttabs'
+" TODO: Make my own simple version for smart tabs since this conflicts with
+" autopairs
+"Plug 'dpc/vim-smarttabs'
 
 call plug#end()
 
