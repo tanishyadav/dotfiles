@@ -25,6 +25,7 @@ torun=( "crap-pack-rm"
 	"bat"
 	"fasd"
 	"ag"
+	"delta"
 )
 for script in "${torun[@]}"; do
 	if yesno "Install $script ? (y/n) "; then
