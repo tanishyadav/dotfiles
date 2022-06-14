@@ -244,7 +244,7 @@ let g:show_spaces_that_precede_tabs=1
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'jiangmiao/auto-pairs'
-let g:AutoPairsFlyMode = 1
+"let g:AutoPairsFlyMode = 1
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
 " TODO: Make my own simple version for smart tabs since this conflicts with
