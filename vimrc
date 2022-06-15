@@ -117,6 +117,9 @@ set showtabline=2
 set splitbelow
 " Split right when splitting vertically
 set splitright
+" Enable modelines
+set modeline
+set modelines=5
 " Set textwidth
 set textwidth=80
 " Insert 4 characters of white space for indentation
