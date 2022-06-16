@@ -80,6 +80,7 @@ export LC_ALL="$LANG"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 export PAGER="less -RF"
+export DELTA_PAGER="less -rf" # hyperlinks don't work with `less -R`
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # ## paths
 # automatically remove duplicates from these arrays

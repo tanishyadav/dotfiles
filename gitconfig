@@ -24,7 +24,7 @@
 [delta]
 	line-numbers = true
 	side-by-side = true
-	;hyperlinks = true
+	hyperlinks = true
 	navigate = true
 	features = chameleon
 	syntax-theme = Solarized (dark)
