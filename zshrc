@@ -209,6 +209,7 @@ alias pu='pushd'
 alias po='popd'
 alias ty='type -fa'
 alias ack='ag'
+alias fda='fd --no-ignore --hidden'
 alias myip='echo $(curl -s ipinfo.io/ip)'
 alias sudo='sudo '                            # allow alias expansion on sudo commands
 alias mount='prettymount'
