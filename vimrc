@@ -250,9 +250,7 @@ Plug 'tpope/vim-rhubarb'
 "let g:AutoPairsFlyMode = 1
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
-" TODO: Make my own simple version for smart tabs since this conflicts with
-" autopairs
-"Plug 'dpc/vim-smarttabs'
+Plug 'dpc/vim-smarttabs'
 
 call plug#end()
 
