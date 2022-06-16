@@ -267,3 +267,5 @@ source ~/.zsh/zsh-sudo/sudo.zsh
 source ~/.zsh/zsh-git/git.zsh
 # fasd
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install)"
+
+# vim: ft=zsh :

@@ -256,3 +256,4 @@ let g:ackprg = 'ag --vimgrep'
 
 call plug#end()
 
+" vim: ft=vim :
