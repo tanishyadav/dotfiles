@@ -271,5 +271,13 @@ eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp z
 # FZF
 path+=("$HOME/.fzf/bin")
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set terminal-title
+case $TERM in
+	xterm*)
+		set-term-title () {print -Pn '\e]0;%~\e\\'}
+		autoload -Uz add-zsh-hook
+		add-zsh-hook precmd set-term-title
+		;;
+esac
 
 # vim: ft=zsh :
