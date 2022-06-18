@@ -271,6 +271,18 @@ eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp z
 # FZF
 path+=("$HOME/.fzf/bin")
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fzf_my_search="fd --no-ignore"
+fzf_my_search_dir="fd  --no-ignore --hidden --type d --exclude='.git'"
+fzf_my_search_hidden="fd --no-ignore --hidden --exclude='.git'"
+fzf_my_pv_com="bat --color=always --line-range :500 {}"
+fzf_my_bind="ctrl-a:select-all,alt-a:deselect-all,alt-j:preview-down,alt-k:preview-up,esc:cancel,shift-up:first,shift-down:last,ctrl-l:reload(${fzf_my_search})+change-prompt(> ),alt-d:reload(${fzf_my_search_dir})+change-prompt(D> ),alt-h:reload(${fzf_my_search_hidden})+change-prompt(H> ),alt-p:toggle-preview,ctrl-/:change-preview-window(down|right)+toggle-preview"
+export FZF_COMPLETION_TRIGGER=";;"
+export FZF_DEFAULT_OPTS="--extended --multi --bind='${fzf_my_bind}' --height=40% --layout=reverse --border=bottom --info=inline --prompt='> ' --tabstop=8 --preview='${fzf_my_pv_com}' --preview-window=hidden"
+export FZF_DEFAULT_COMMAND="$fzf_my_search"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$fzf_my_search_dir"
+eval "_fzf_compgen_path() { $fzf_my_search }"
+eval "_fzf_compgen_dir() { $fzf_my_search_dir }"
 # Set terminal-title
 case $TERM in
 	xterm*)
