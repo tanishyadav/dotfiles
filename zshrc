@@ -176,6 +176,28 @@ alias la='ls -lAv'
 alias lsd='ls -ldv *(-/DN)' # list only directories and symbolic links that point to directories
 alias lsa='ls -lvdv .*'      # list only file beginning with "."
 
+# ## exa
+if command exa -v > /dev/null 2>&1; then
+	alias e='exa --icons --classify'
+	alias el='exa --icons --long --binary'
+	alias ell='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git'
+	alias elll='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git --extended'
+	alias ea='exa --icons --classify --all'
+	alias ela='exa --icons --long --binary --all'
+	alias ella='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git --all'
+	alias ellla='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git --extended --all'
+	alias et='exa --icons --classify --tree'
+	alias etl='exa --icons --long --binary --tree'
+	alias etll='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git --tree'
+	alias etlll='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git --extended --tree'
+	alias eta='exa --icons --classify --tree --all'
+	alias etla='exa --icons --long --binary --tree --all'
+	alias etlla='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git --tree --all'
+	alias etllla='exa --icons --long --binary --header --links --inode --modified --blocks --created --accessed --git --extended --tree --all'
+	alias ed='exa --long --list-dirs *(-/DN)'
+	alias eA='exa --long --list-dirs .*'
+fi
+
 # ## bat
 alias b='bat'
 alias ba='bat --show-all'
