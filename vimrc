@@ -251,6 +251,9 @@ Plug 'tpope/vim-rhubarb'
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
 Plug 'dpc/vim-smarttabs'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+let g:fzf_command_prefix = 'Fzf'
 
 call plug#end()
 
