@@ -250,7 +250,9 @@ Plug 'tpope/vim-rhubarb'
 "let g:AutoPairsFlyMode = 1
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
-Plug 'dpc/vim-smarttabs'
+"Plug 'dpc/vim-smarttabs'
+Plug 'Thyrum/vim-stabs'
+autocmd vimenter * ++nested nunmap =
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 let g:fzf_command_prefix = 'Fzf'
