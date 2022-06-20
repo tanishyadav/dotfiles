@@ -120,10 +120,10 @@ function gaaa() {
 	git add --all && git commit -m $@ && git push
 }
 function kcc() {
-	gcc -o "$1.out" "$1.c" && ./$1.out
+	gcc -Wall -Wextra -Wfloat-equal -g -o "$1.o" "$1.c"
 }
 function kcr() {
-	./$1.out
+	./$1.o
 }
 function kg() {
 	git add "$(basename $(readlink -f "$1.c"))"
