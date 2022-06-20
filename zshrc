@@ -217,6 +217,12 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 
+# ## gcc
+alias mcc="gcc -Wall -Wextra -Wfloat-equal -O2"
+alias mccp="mcc -E"
+alias mcca="mcc -S"
+alias mcco="mcc -c"
+
 # ## preserve-root
 #alias rm='rm --preserve-root'
 alias chown='chown --preserve-root'
