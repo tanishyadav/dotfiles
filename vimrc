@@ -147,6 +147,8 @@ set infercase
 " formatoptions
 " TODO
 set formatoptions+=j
+" Autoread file if changed by other program
+set autoread
 " TODO: Add spellcheck
 " TODO: Add omni completion
 
