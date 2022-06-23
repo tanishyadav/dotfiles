@@ -175,8 +175,10 @@ inoremap {<CR> {<CR>}<C-o>O
 nnoremap <LEADER>; m'A;<ESC>`'
 " Show whitespace visually
 "nnoremap <LEADER>s :set list!<CR>
-" Remove highlights for current search
-nnoremap <LEADER>h :noh<CR>
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
 " Just like o/O but doesn't enter INSERT mode
 nnoremap <LEADER>o o<ESC>
 nnoremap <LEADER>O O<ESC>
