@@ -144,6 +144,9 @@ set copyindent
 set encoding=utf-8
 " When doing keyword completion adjust case of match depending on the typed text
 set infercase
+" formatoptions
+" TODO
+set formatoptions+=j
 " TODO: Add spellcheck
 " TODO: Add omni completion
 
