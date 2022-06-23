@@ -104,6 +104,10 @@ set timeoutlen=500
 set ttimeoutlen=50
 " Show @@@ in the last line if it is truncated, instead of hiding the whole line
 set display=lastline
+" Don't store options in sessions
+set sessionoptions-=options
+" Don't store options in views
+set viewoptions-=options
 " Minimum screen lines around the cursor
 set scrolloff=3
 " Listchars
