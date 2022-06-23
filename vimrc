@@ -259,6 +259,7 @@ let g:fzf_command_prefix = 'Fzf'
 Plug 'sheerun/vim-polyglot'
 let g:polyglot_disabled = ['sensible']
 Plug 'junegunn/vim-peekaboo'
+Plug 'tpope/vim-scriptease'
 
 call plug#end()
 
