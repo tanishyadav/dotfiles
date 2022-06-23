@@ -108,7 +108,9 @@ set listchars=tab:\ \ →,nbsp:·,extends:→,precedes:←
 set list
 " Manage wrapping of lines
 set nowrap
-set sidescroll=5
+" Side scrolling
+set sidescroll=10
+set sidescrolloff=5
 " Make tilde an opertor
 "set tildeop
 " Show status line always
