@@ -76,6 +76,8 @@ let &t_EI = "\<esc>[2 q"
 set ruler
 " Show line numbers
 set number
+" Show possible matches above the command line on <TAB>
+set wildmenu
 " Ignore case
 set ignorecase
 " Match case if search pattern contains CAPS
