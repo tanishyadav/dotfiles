@@ -33,21 +33,22 @@ if !isdirectory($HOME."/.vim/undo")
 endif
 set undodir=~/.vim/undo
 set undofile
-" Disable backup
+" Backup
 set nobackup
-" Enable syntax highlighting
-syntax on
+set writebackup
 " Enable filetype plugins and indents
 filetype plugin indent on
+" Enable syntax highlighting
+syntax on
 " Set the leader key
 let mapleader=" "
+let maplocaleader=" "
 " My terminal supports true colors
 set termguicolors
 " Colorscheme
-"set background=dark
-"colorscheme solarized8
+set background=dark
 " Enable mouse support
-set mouse=a
+set mouse=nvi
 " Make either meta or alt key work in GNOME terminal; Both can't :(
 "let c='a'
 "while c <= 'z'
@@ -111,8 +112,6 @@ set nowrap
 " Side scrolling
 set sidescroll=10
 set sidescrolloff=5
-" Make tilde an opertor
-"set tildeop
 " Show status line always
 set laststatus=2
 " Show tabline always
@@ -130,10 +129,9 @@ set textwidth=80
 "set shiftwidth=4
 " Show tab characters (\t) as at most 8 characters
 "set tabstop=8
-" Don't use a mix of tabs and spaces (though this is default)
+" Don't use a mix of tabs and spaces
 "set softtabstop=0
-" Insert spaces when <TAB> is pressed in insert mode (Use <CTRL>-V to
-" insert literal tab)
+" Insert spaces when <TAB> is pressed in insert mode
 "set expandtab
 " When typing a <TAB> to manually insert indentation in the start of a
 " line, use shiftwidth amount of white space instead of tabstop
@@ -142,8 +140,6 @@ set textwidth=80
 set autoindent
 " Copy indentation from previous line
 set copyindent
-" Show cursor at the start of tab
-"set listchars=tab:\ \  list
 " Use UTF-8 for almost everything
 set encoding=utf-8
 " When doing keyword completion adjust case of match depending on the typed text
@@ -177,8 +173,6 @@ inoremap {<CR> {<CR>}<C-o>O
 "inoremap /*<CR> /*<CR><CR>*/<ESC>kS
 " Put semicolon to end of line without moving cursor
 nnoremap <LEADER>; m'A;<ESC>`'
-" Show whitespace visually
-"nnoremap <LEADER>s :set list!<CR>
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
@@ -186,12 +180,6 @@ endif
 " Just like o/O but doesn't enter INSERT mode
 nnoremap <LEADER>o o<ESC>
 nnoremap <LEADER>O O<ESC>
-" Paste from clipboard
-"nnoremap <LEADER>p "+p
-"nnoremap <LEADER>P "+P
-" Copy to clipboard
-"nnoremap <LEADER>y "+y
-"nnoremap <LEADER>Y "+Y
 " Write a *byte* faster
 nnoremap <LEADER>w :w<CR>
 " I open terminals a bit too often :D
