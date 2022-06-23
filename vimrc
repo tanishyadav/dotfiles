@@ -100,7 +100,7 @@ set ttimeout
 set timeoutlen=500
 set ttimeoutlen=50
 " Show @@@ in the last line if it is truncated, instead of hiding the whole line
-set display=truncate
+set display=lastline
 " Minimum screen lines around the cursor
 set scrolloff=3
 " Listchars
