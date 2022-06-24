@@ -319,6 +319,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$fzf_my_search_dir"
 eval "_fzf_compgen_path() { $fzf_my_search }"
 eval "_fzf_compgen_dir() { $fzf_my_search_dir }"
+# GIT FZF
+source ~/.zsh/git-fzf/functions.sh
+source ~/.zsh/git-fzf/key-binding.zsh
 # Set terminal-title
 case $TERM in
 	xterm*)
