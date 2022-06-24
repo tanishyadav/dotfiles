@@ -201,6 +201,8 @@ nnoremap <LEADER>f :FZF<CR>
 nnoremap <LEADER>g :vert Git<CR>
 " Tab through windows
 nnoremap <TAB> <C-W><C-W>
+" Goyo - FOCUS!
+nnoremap <F5> :Goyo<CR>
 " TODO: Move bindings to filetype files
 " TODO: Add binding for auto-completion
 
@@ -265,6 +267,7 @@ Plug 'sheerun/vim-polyglot'
 let g:polyglot_disabled = ['sensible']
 Plug 'junegunn/vim-peekaboo'
 "Plug 'tpope/vim-scriptease'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
