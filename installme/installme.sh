@@ -28,6 +28,7 @@ torun=( "crap-pack-rm"
 	"delta"
 	"fd"
 	"fzf"
+	"git-fzf"
 	"exa"
 	"hyperfine"
 )
