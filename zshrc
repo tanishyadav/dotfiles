@@ -312,8 +312,8 @@ alt-p:preview(${fzf_my_pv_com}),alt-o:change-preview-window(hidden),\
 ctrl-/:change-preview-window(down,90%|right)"
 export FZF_COMPLETION_TRIGGER=";;"
 export FZF_DEFAULT_OPTS="--extended --multi --bind='${fzf_my_bind}' \
-	--height=40% --layout=reverse --border=bottom --info=inline \
-	--prompt='> ' --tabstop=8"
+--height=40% --layout=reverse --border=bottom --info=inline --prompt='> ' \
+--tabstop=8"
 export FZF_DEFAULT_COMMAND="$fzf_my_search"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$fzf_my_search_dir"
