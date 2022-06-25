@@ -205,6 +205,8 @@ nnoremap <TAB> <C-W><C-W>
 nnoremap <F5> :Goyo<CR>
 " Undotree
 nnoremap <F4> :UndotreeToggle<CR>
+" Limelight
+nnoremap <F6> :Limelight!!<CR>
 " TODO: Move bindings to filetype files
 " TODO: Add binding for auto-completion
 
@@ -271,6 +273,11 @@ Plug 'junegunn/vim-peekaboo'
 "Plug 'tpope/vim-scriptease'
 Plug 'junegunn/goyo.vim'
 Plug 'mbbill/undotree'
+Plug 'junegunn/limelight.vim'
+let g:limelight_default_coefficient = 0.7
+let g:limelight_priority = -1
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 call plug#end()
 
