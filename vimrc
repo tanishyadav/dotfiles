@@ -256,7 +256,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 let g:show_spaces_that_precede_tabs=1
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
+"Plug 'tpope/vim-rhubarb'
 "Plug 'jiangmiao/auto-pairs'
 "let g:AutoPairsFlyMode = 1
 Plug 'mileszs/ack.vim'
