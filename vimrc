@@ -203,6 +203,8 @@ nnoremap <LEADER>g :vert Git<CR>
 nnoremap <TAB> <C-W><C-W>
 " Goyo - FOCUS!
 nnoremap <F5> :Goyo<CR>
+" Undotree
+nnoremap <F4> :UndotreeToggle<CR>
 " TODO: Move bindings to filetype files
 " TODO: Add binding for auto-completion
 
@@ -268,6 +270,7 @@ let g:polyglot_disabled = ['sensible']
 Plug 'junegunn/vim-peekaboo'
 "Plug 'tpope/vim-scriptease'
 Plug 'junegunn/goyo.vim'
+Plug 'mbbill/undotree'
 
 call plug#end()
 
