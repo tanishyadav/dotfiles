@@ -269,6 +269,7 @@ Plug 'junegunn/fzf.vim'
 let g:fzf_command_prefix = 'Fzf'
 Plug 'sheerun/vim-polyglot'
 let g:polyglot_disabled = ['sensible']
+let g:python_highlight_space_errors = 0
 Plug 'junegunn/vim-peekaboo'
 "Plug 'tpope/vim-scriptease'
 Plug 'junegunn/goyo.vim'
