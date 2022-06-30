@@ -5,9 +5,9 @@ source "$(dirname $(readlink -f $0))/config.sh"
 fzf_path="$HOME/.fzf"
 fzf_link="https://github.com/junegunn/fzf.git"
 
-echo "Uninstalling fzf..."
-[[ -e "$fzf_path/uninstall" ]] && "$fzf_path/uninstall"
 echo "Removing exiting fzf..."
+[[ -e ~/.fzf.bash ]] && rm -f ~/.fzf.bash
+[[ -e ~/.fzf.zsh ]] && rm -f ~/.fzf.zsh
 [[ -e "$fzf_path" ]] && rm -rf "$fzf_path"
 
 echo "Creating fzf directory..."
