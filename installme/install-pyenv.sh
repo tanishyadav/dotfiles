@@ -21,14 +21,17 @@ echo "                          PYENV INSTALLED!!!                          "
 echo "----------------------------------------------------------------------"
 echo
 
-if yesno "Install python '3.10.4'? (y/n) "; then
+latest_python3=$($PYENV_PATH/bin/pyenv install --list | sed 's/^  //' | \
+	grep '^3.[0-9]*.[0-9]*$' | tail -n1)
+
+if yesno "Install python '$latest_python3'? (y/n) "; then
 	echo "Installing..."
-	$PYENV_PATH/bin/pyenv install "3.10.4"
+	$PYENV_PATH/bin/pyenv install "$latest_python3"
 fi
 
-if yesno "Make '3.10.4' global? (y/n) "; then
+if yesno "Make '$latest_python3' global? (y/n) "; then
 	echo "Globalling..."
-	$PYENV_PATH/bin/pyenv global "3.10.4"
+	$PYENV_PATH/bin/pyenv global "$latest_python3"
 fi
 
 if yesno "Install python '2.7.18'? (y/n) "; then
