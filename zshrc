@@ -308,12 +308,11 @@ alt-k:preview-up,esc:cancel,shift-up:first,shift-down:last,\
 ctrl-l:reload(${fzf_my_search})+change-prompt(> ),\
 alt-d:reload(${fzf_my_search_dir})+change-prompt(D> ),\
 alt-h:reload(${fzf_my_search_hidden})+change-prompt(H> ),\
-alt-p:preview(${fzf_my_pv_com}),alt-o:change-preview-window(hidden),\
-ctrl-/:change-preview-window(down,90%|right)"
+alt-p:toggle-preview,ctrl-/:change-preview-window(down,90%|right)"
 export FZF_COMPLETION_TRIGGER=";;"
 export FZF_DEFAULT_OPTS="--extended --multi --bind='${fzf_my_bind}' \
 --height=40% --layout=reverse --border=bottom --info=inline --prompt='> ' \
---tabstop=8"
+--tabstop=8 --preview='${fzf_my_pv_com}' --preview-window=hidden"
 export FZF_DEFAULT_COMMAND="$fzf_my_search"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$fzf_my_search_dir"
