@@ -13,6 +13,7 @@ sudo apt upgrade
 torun=( "crap-pack-rm"
 	"apt-packages"
 	"vim"
+	"terminator"
 	"zsh"
 	"zsh-powerline10k"
 	"zsh-syntax-highlighting"
