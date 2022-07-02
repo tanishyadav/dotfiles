@@ -146,6 +146,8 @@ set textwidth=80
 set autoindent
 " Copy indentation from previous line
 set copyindent
+" Don't extra indent case labels of switch statement in c
+set cinoptions+=:0
 " Use UTF-8 for almost everything
 set encoding=utf-8
 " When doing keyword completion adjust case of match depending on the typed text
